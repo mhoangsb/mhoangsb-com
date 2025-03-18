@@ -137,17 +137,27 @@ export default function HomePage() {
         <div className="mb-5 mt-4 h-[1px] bg-gray-700"></div>
         <p className="mt-4 text-sm leading-relaxed">
           {
-            "I'm a frontend developer working towards becoming a senior full-stack developer."
+            "Hi, my name is Mạnh Hoàng (mhoang), but my friends also call me SB."
           }
         </p>
         <p className="mt-4 text-sm leading-relaxed">
           {
-            "I learn quickly by reading official documentation (in English). I can work independently, researching and solving problems on my own"
+            "I'm a frontend developer on a journey to becoming a senior full-stack developer."
           }
         </p>
         <p className="mt-4 text-sm leading-relaxed">
           {
-            "I have experience with React, Next.js, and Angular. I’m confident in core web technologies like HTML, CSS, and JavaScript (though vanilla JS can get messy fast). I prefer TypeScript over JavaScript and enjoy using TailwindCSS more than plain CSS."
+            "Passionate about coding, I thrive on continuous learning through hands-on experience—building things, breaking them, fixing them, and improving along the way. There's nothing more rewarding than seeing my code run successfully for the first time."
+          }
+        </p>
+        <p className="mt-4 text-sm leading-relaxed">
+          {
+            "I learn quickly by reading official documentation. I can work independently, researching and solving problems on my own"
+          }
+        </p>
+        <p className="mt-4 text-sm leading-relaxed">
+          {
+            "I have experience with React, Next.js, and Angular. I’m confident in core web technologies like HTML, CSS, and JavaScript. I prefer TypeScript over JavaScript and enjoy using TailwindCSS more than plain CSS."
           }
         </p>
         <p className="mt-4 text-sm leading-relaxed">
