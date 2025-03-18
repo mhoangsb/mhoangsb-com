@@ -1,87 +1,26 @@
 import Image from "next/image";
-
-import ClickToCopy from "@/components/ClickToCopy";
+import GithubAvatar from "@/../public/github_avatar.png";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import TechnologyCard from "@/components/TechnologyCard";
-
-import GithubAvatar from "@/../public/github_avatar.png";
-import AngularSvg from "@/../public/angular-svgrepo-com.svg";
-import AspNetSvg from "@/../public/aspnet-svgrepo-com.svg";
-import CSharpSvg from "@/../public/csharp-svgrepo-com.svg";
-import CssSvg from "@/../public/css3-svgrepo-com.svg";
-import HtmlSvg from "@/../public/html-5-svgrepo-com.svg";
-import JavaScriptSvg from "@/../public/javascript-svgrepo-com.svg";
-import NextJsSvg from "@/../public/nextjs-fill-svgrepo-com.svg";
-import ReactSvg from "@/../public/react-logo-svgrepo-com.svg";
-import TailwindCssSvg from "@/../public/tailwindcss-icon-svgrepo-com.svg";
-import TypeScriptSvg from "@/../public/typescript-official-svgrepo-com.svg";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
-type TechnologyInfo = {
-  svg: StaticImport;
-  href: string;
-  name: string;
-};
+import ClickToCopy from "@/components/ClickToCopy";
+import {
+  AngularCard,
+  AspNetCoreCard,
+  CSharpCard,
+  CssCard,
+  HtmlCard,
+  JavaScriptCard,
+  NextJsCard,
+  ReactCard,
+  TailwindCssCard,
+  TypeScriptCard,
+} from "@/components/TechnologyCardCollection";
 
 export default function HomePage() {
-  const technologies: TechnologyInfo[] = [
-    {
-      svg: HtmlSvg,
-      href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-      name: "HTML",
-    },
-    {
-      svg: CssSvg,
-      href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      name: "CSS",
-    },
-    {
-      svg: JavaScriptSvg,
-      href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      name: "JS",
-    },
-    {
-      svg: TypeScriptSvg,
-      href: "https://www.typescriptlang.org/",
-      name: "TS",
-    },
-    {
-      svg: TailwindCssSvg,
-      href: "https://tailwindcss.com/",
-      name: "Tailwind",
-    },
-    {
-      svg: ReactSvg,
-      href: "https://react.dev/",
-      name: "React",
-    },
-    {
-      svg: NextJsSvg,
-      href: "https://nextjs.org/",
-      name: "NextJS",
-    },
-    {
-      svg: AngularSvg,
-      href: "https://angular.dev/",
-      name: "Angular",
-    },
-    {
-      svg: CSharpSvg,
-      href: "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/",
-      name: "C#",
-    },
-    {
-      svg: AspNetSvg,
-      href: "https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-9.0",
-      name: "Asp.Net",
-    },
-  ];
-
   return (
     <main className="mx-auto mb-20 mt-10 flex max-w-xl flex-col gap-14 px-4">
       <header>
@@ -192,13 +131,16 @@ export default function HomePage() {
         <h2 className="text-base text-white">Technologies that I use</h2>
         <div className="mb-5 mt-4 h-[1px] bg-gray-700"></div>
         <div className="mt-5 flex flex-wrap gap-8">
-          {technologies.map((tech, i) => (
-            <div className="shrink-0" key={i}>
-              <TechnologyCard href={tech.href} name={tech.name}>
-                <Image src={tech.svg} alt={`${tech.name} logo`} unoptimized />
-              </TechnologyCard>
-            </div>
-          ))}
+          <ReactCard />
+          <NextJsCard />
+          <AngularCard />
+          <HtmlCard />
+          <CssCard />
+          <JavaScriptCard />
+          <TypeScriptCard />
+          <TailwindCssCard />
+          <CSharpCard />
+          <AspNetCoreCard />
         </div>
       </section>
     </main>
