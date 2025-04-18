@@ -72,29 +72,50 @@ const technologies = {
   },
 };
 
-function createTechnologyCard(technology: TechnologyInfo): React.FC {
-  const GeneratedTechnologyCardComponent = () => (
+function TechnologyCardCore({ techInfo }: { techInfo: TechnologyInfo }) {
+  return (
     <div className="shrink-0">
-      <TechnologyCard href={technology.href} name={technology.name}>
-        <Image
-          src={technology.svg}
-          alt={`${technology.name} logo`}
-          unoptimized
-        />
+      <TechnologyCard href={techInfo.href} name={techInfo.name}>
+        <Image src={techInfo.svg} alt={`${techInfo.name} logo`} unoptimized />
       </TechnologyCard>
     </div>
   );
-
-  return GeneratedTechnologyCardComponent;
 }
 
-export const HtmlCard = createTechnologyCard(technologies.HTML);
-export const CssCard = createTechnologyCard(technologies.CSS);
-export const JavaScriptCard = createTechnologyCard(technologies.JavaScript);
-export const TypeScriptCard = createTechnologyCard(technologies.TypeScript);
-export const TailwindCssCard = createTechnologyCard(technologies.TailwindCSS);
-export const ReactCard = createTechnologyCard(technologies.React);
-export const NextJsCard = createTechnologyCard(technologies.NextJS);
-export const AngularCard = createTechnologyCard(technologies.Angular);
-export const CSharpCard = createTechnologyCard(technologies.CSharp);
-export const AspNetCoreCard = createTechnologyCard(technologies.AspNetCore);
+export const HtmlCard = () => (
+  <TechnologyCardCore techInfo={technologies.HTML} />
+);
+
+export const CssCard = () => <TechnologyCardCore techInfo={technologies.CSS} />;
+
+export const JavaScriptCard = () => (
+  <TechnologyCardCore techInfo={technologies.JavaScript} />
+);
+
+export const TypeScriptCard = () => (
+  <TechnologyCardCore techInfo={technologies.TypeScript} />
+);
+
+export const TailwindCssCard = () => (
+  <TechnologyCardCore techInfo={technologies.TailwindCSS} />
+);
+
+export const ReactCard = () => (
+  <TechnologyCardCore techInfo={technologies.React} />
+);
+
+export const NextJsCard = () => (
+  <TechnologyCardCore techInfo={technologies.NextJS} />
+);
+
+export const AngularCard = () => (
+  <TechnologyCardCore techInfo={technologies.Angular} />
+);
+
+export const CSharpCard = () => (
+  <TechnologyCardCore techInfo={technologies.CSharp} />
+);
+
+export const AspNetCoreCard = () => (
+  <TechnologyCardCore techInfo={technologies.AspNetCore} />
+);
