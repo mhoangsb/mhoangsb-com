@@ -6,14 +6,12 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 export type ProjectCardParams = {
   imageSrc: StaticImageData;
   projectName: string;
+  href: string;
 };
 
-export default function ProjectCard({
-  imageSrc,
-  projectName,
-}: ProjectCardParams) {
+export default function ProjectCard({ imageSrc, projectName, href }: ProjectCardParams) {
   return (
-    <Link href="#" className="group cursor-pointer">
+    <Link href={href} className="group cursor-pointer">
       <Image
         className="aspect-video overflow-hidden rounded-xl border border-gray-800 group-hover:border-gray-600"
         src={imageSrc}
