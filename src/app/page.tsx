@@ -1,6 +1,8 @@
 import Image from "next/image";
 import GithubAvatar from "@/../public/github_avatar.png";
 import MhoangSBDotCom from "@/../public/mhoangsb-screenshot.png";
+import FITG from "@/../public/fitg-screenshot.png";
+import WorkOffice from "@/../public/workoffice-screenshot.png";
 import {
   Tooltip,
   TooltipContent,
@@ -20,9 +22,27 @@ import {
   TailwindCssCard,
   TypeScriptCard,
 } from "@/components/TechnologyCardCollection";
-import Link from "next/link";
+import ProjectCard, { ProjectCardParams } from "@/components/ProjectCard";
 
 export default function HomePage() {
+  const projects: ProjectCardParams[] = [
+    {
+      imageSrc: MhoangSBDotCom,
+      projectName: "mhoangsb.com",
+      href: `/project/mhoangsb-com`,
+    },
+    {
+      imageSrc: FITG,
+      projectName: "Fill In The Gap",
+      href: `project/fill-in-the-gap`,
+    },
+    {
+      imageSrc: WorkOffice,
+      projectName: "WorkOffice",
+      href: `project/workoffice`,
+    },
+  ];
+
   return (
     <main className="mx-auto mb-20 mt-10 flex max-w-2xl flex-col gap-14 px-4">
       <header>
@@ -33,9 +53,7 @@ export default function HomePage() {
         />
         <h1 className="mt-4 text-xl text-white sm:text-2xl">MHoangSB</h1>
         <div className="mb-5 mt-4 h-[1px] bg-gray-700"></div>
-        <p className="text-sm sm:text-base">
-          Frontend developer (soon-to-be fullstack)
-        </p>
+        <p className="text-sm sm:text-base">Frontend developer (soon-to-be fullstack)</p>
       </header>
 
       <section className="text-sm sm:text-base">
@@ -79,9 +97,7 @@ export default function HomePage() {
         <h2 className="text-base text-white sm:text-lg">About me</h2>
         <div className="mb-5 mt-4 h-[1px] bg-gray-700"></div>
         <p className="mt-4 leading-relaxed">
-          {
-            "Hi, my name is Mạnh Hoàng (mhoang), but my friends also call me SB."
-          }
+          {"Hi, my name is Mạnh Hoàng (mhoang), but my friends also call me SB."}
         </p>
         <p className="mt-4 leading-relaxed">
           {
@@ -153,17 +169,9 @@ export default function HomePage() {
         <div className="mb-5 mt-4 h-[1px] bg-gray-700"></div>
 
         <div className="grid gap-8 sm:grid-cols-2">
-          <Link href="#" className="group cursor-pointer">
-            <Image
-              className="aspect-video overflow-hidden rounded-xl border border-gray-800 group-hover:border-gray-600"
-              src={MhoangSBDotCom}
-              alt="mhoangsb.com screenshot"
-            />
-            <span className="mt-2 block w-full text-center text-base group-hover:underline group-hover:underline-offset-2">
-              mhoangsb.com
-            </span>
-          </Link>
-          <div className="h-full border border-red-600"></div>
+          {projects.map((project) => (
+            <ProjectCard {...project} key={project.href} />
+          ))}
         </div>
       </section>
     </main>
