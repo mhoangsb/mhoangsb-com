@@ -18,9 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${lexend.className} bg-gray-950 text-[#aaa] antialiased`}
-      >
+      <body className={`${lexend.className} bg-gray-950 text-[#aaa] antialiased`}>
         {children}
       </body>
     </html>
