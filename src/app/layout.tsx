@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
+import { CurrentLanguageProvider } from "@/contexts/CurrentLanguageContext";
 
 const lexend = Lexend({
   subsets: ["latin", "vietnamese"],
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lexend.className} bg-gray-950 text-[#aaa] antialiased`}>
-        {children}
+        <CurrentLanguageProvider>{children}</CurrentLanguageProvider>
       </body>
     </html>
   );
