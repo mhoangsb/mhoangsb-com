@@ -27,6 +27,7 @@ import {
 import ProjectCard, { ProjectCardParams } from "@/components/ProjectCard";
 import { useCurrentLanguage } from "@/contexts/CurrentLanguageContext";
 import homePageDictionary from "@/dictionaries/homePageDictionary";
+import LanguageSelector from "@/components/LanguageSelector";
 
 export default function HomePage() {
   const currentLanguage = useCurrentLanguage();
@@ -58,8 +59,9 @@ export default function HomePage() {
           alt="Github avatar image"
           className="aspect-square h-16 w-auto rounded-full"
         />
-        <h1 className="mt-4 text-xl text-white sm:text-2xl">
+        <h1 className="relative mt-4 text-xl text-white sm:text-2xl">
           <span>MHoangSB</span>
+          <LanguageSelector />
         </h1>
         <div className="mb-5 mt-4 h-[1px] bg-gray-700"></div>
         <p className="text-sm sm:text-base">{dictionary.header}</p>
