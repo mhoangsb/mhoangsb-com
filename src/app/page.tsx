@@ -52,7 +52,7 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="mx-auto mb-20 mt-10 flex max-w-2xl flex-col gap-14 px-4">
+    <main className="flex flex-col gap-14">
       <header>
         <Image
           src={GithubAvatar}

@@ -20,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lexend.className} bg-gray-950 text-[#aaa] antialiased`}>
-        <CurrentLanguageProvider>{children}</CurrentLanguageProvider>
+        <div className="mx-auto mb-20 mt-10 max-w-2xl px-4">
+          <CurrentLanguageProvider>{children}</CurrentLanguageProvider>
+        </div>
       </body>
     </html>
   );
