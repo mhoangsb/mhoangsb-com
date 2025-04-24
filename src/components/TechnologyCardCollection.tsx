@@ -9,7 +9,7 @@ import ReactSvg from "@/../public/react-logo-svgrepo-com.svg";
 import TailwindCssSvg from "@/../public/tailwindcss-icon-svgrepo-com.svg";
 import TypeScriptSvg from "@/../public/typescript-official-svgrepo-com.svg";
 import FlutterSvg from "@/../public/flutter-svgrepo-com.svg";
-import VercelSvg from "@/../public/vercel-svgrepo-com.svg";
+import VercelSvg from "@/../public/vercel-fill-svgrepo-com.svg";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import TechnologyCard from "./TechnologyCard";
 import Image from "next/image";
