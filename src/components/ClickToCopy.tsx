@@ -19,7 +19,7 @@ export default function ClickToCopy({
   };
 
   return (
-    <TooltipProvider>
+    <TooltipProvider delayDuration={100}>
       <Tooltip>
         <TooltipTrigger onClick={handleClickToCopy}>{children}</TooltipTrigger>
         <TooltipContent>
