@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="mb-5 mt-4 h-[1px] bg-gray-700"></div>
         <div className="mb-1 flex justify-between">
           <span>Website:</span>
-          <TooltipProvider>
+          <TooltipProvider delayDuration={100}>
             <Tooltip>
               <TooltipTrigger>
                 <span className="hover:text-white">mhoangsb.com</span>
@@ -150,6 +150,16 @@ export default function HomePage() {
           <CSharpCard />
           <AspNetCoreCard />
         </div>
+      </section>
+
+      <section className="text-sm sm:text-base">
+        <h2 className="text-base text-white sm:text-lg">{dictionary.experience.title}</h2>
+        <div className="mb-5 mt-4 h-[1px] bg-gray-700"></div>
+        {dictionary.experience.content.map((paragraph, i) => (
+          <p key={i} className="mt-4 leading-relaxed">
+            {paragraph}
+          </p>
+        ))}
       </section>
 
       <section>
