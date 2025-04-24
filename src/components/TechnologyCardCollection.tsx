@@ -8,6 +8,8 @@ import NextJsSvg from "@/../public/nextjs-fill-svgrepo-com.svg";
 import ReactSvg from "@/../public/react-logo-svgrepo-com.svg";
 import TailwindCssSvg from "@/../public/tailwindcss-icon-svgrepo-com.svg";
 import TypeScriptSvg from "@/../public/typescript-official-svgrepo-com.svg";
+import FlutterSvg from "@/../public/flutter-svgrepo-com.svg";
+import VercelSvg from "@/../public/vercel-svgrepo-com.svg";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import TechnologyCard from "./TechnologyCard";
 import Image from "next/image";
@@ -70,6 +72,16 @@ const technologies = {
     href: "https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-9.0",
     name: "Asp.Net",
   },
+  Flutter: {
+    svg: FlutterSvg,
+    href: "https://flutter.dev/",
+    name: "Flutter",
+  },
+  Vercel: {
+    svg: VercelSvg,
+    href: "https://vercel.com/home",
+    name: "Vercel",
+  },
 };
 
 function TechnologyCardCore({ techInfo }: { techInfo: TechnologyInfo }) {
@@ -82,9 +94,7 @@ function TechnologyCardCore({ techInfo }: { techInfo: TechnologyInfo }) {
   );
 }
 
-export const HtmlCard = () => (
-  <TechnologyCardCore techInfo={technologies.HTML} />
-);
+export const HtmlCard = () => <TechnologyCardCore techInfo={technologies.HTML} />;
 
 export const CssCard = () => <TechnologyCardCore techInfo={technologies.CSS} />;
 
@@ -100,22 +110,18 @@ export const TailwindCssCard = () => (
   <TechnologyCardCore techInfo={technologies.TailwindCSS} />
 );
 
-export const ReactCard = () => (
-  <TechnologyCardCore techInfo={technologies.React} />
-);
+export const ReactCard = () => <TechnologyCardCore techInfo={technologies.React} />;
 
-export const NextJsCard = () => (
-  <TechnologyCardCore techInfo={technologies.NextJS} />
-);
+export const NextJsCard = () => <TechnologyCardCore techInfo={technologies.NextJS} />;
 
-export const AngularCard = () => (
-  <TechnologyCardCore techInfo={technologies.Angular} />
-);
+export const AngularCard = () => <TechnologyCardCore techInfo={technologies.Angular} />;
 
-export const CSharpCard = () => (
-  <TechnologyCardCore techInfo={technologies.CSharp} />
-);
+export const CSharpCard = () => <TechnologyCardCore techInfo={technologies.CSharp} />;
 
 export const AspNetCoreCard = () => (
   <TechnologyCardCore techInfo={technologies.AspNetCore} />
 );
+
+export const FlutterCard = () => <TechnologyCardCore techInfo={technologies.Flutter} />;
+
+export const VercelCard = () => <TechnologyCardCore techInfo={technologies.Vercel} />;
